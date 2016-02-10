@@ -1,0 +1,25 @@
+{
+    "Message": {
+        "Subject": "Check out this picture",
+        "Body": {
+            "ContentType": "Text",
+            "Content": "Check out this picture from Image Discovery App!"
+        },
+        "ToRecipients": [
+                         {
+                         "EmailAddress": {
+                         "Address": "<EMAIL>"
+                         }
+                         }
+                         ],
+        
+        "Attachments": [
+                        {
+                        "@odata.type": "#Microsoft.OutlookServices.FileAttachment",
+                        "Name": "image.png",
+                        "contentBytes": "<ContentBytes>",
+                        }
+                        ]
+    },
+    "SaveToSentItems": "true"
+}
