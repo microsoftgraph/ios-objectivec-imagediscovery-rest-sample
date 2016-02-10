@@ -27,10 +27,6 @@ NSString * const kUserConnectionKey = @"USER_CONNECTED";
     
     // Initialize the AuthenticationManager only once.
     dispatch_once(&onceToken, ^{
-        // Disable Keychain sharing
-        // For more information, please visit https://github.com/AzureAD/azure-activedirectory-library-for-objc
-        [[ADAuthenticationSettings sharedInstance] setSharedCacheKeychainGroup:@"com.microsoft.ImageDiscovery"];
-
         sharedInstance = [[AuthenticationManager alloc] init];
         ADAuthenticationError *error;
         sharedInstance.context = [ADAuthenticationContext authenticationContextWithAuthority:kAuthority error:&error];

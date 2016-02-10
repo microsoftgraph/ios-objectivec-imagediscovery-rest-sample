@@ -61,6 +61,7 @@
 		96FB3B771C16658600C763A9 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		9A023D3309D162D047CDA2A5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF97EC480B459EAC6DD6019F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D37DAAC71C6BF4B400DBB561 /* ImageDiscovery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ImageDiscovery.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +153,7 @@
 		963A09E21C113048004E2C00 /* ImageDiscovery */ = {
 			isa = PBXGroup;
 			children = (
+				D37DAAC71C6BF4B400DBB561 /* ImageDiscovery.entitlements */,
 				96A005371C2409BC009D8246 /* Resources */,
 				96B616B31C23AA5100C19C8E /* Library */,
 				966D6AB01C2263C5009D1DE3 /* Models */,
@@ -248,7 +250,7 @@
 						DevelopmentTeam = UBF8T346G9;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -461,6 +463,7 @@
 			baseConfigurationReference = CF97EC480B459EAC6DD6019F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageDiscovery/ImageDiscovery.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ImageDiscovery/Info.plist;
@@ -477,6 +480,7 @@
 			baseConfigurationReference = 9A023D3309D162D047CDA2A5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageDiscovery/ImageDiscovery.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ImageDiscovery/Info.plist;

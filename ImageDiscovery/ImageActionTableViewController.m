@@ -78,14 +78,14 @@
 
 #pragma mark - Upload to OneDrive
 - (void)uploadToOneDrive {
-
+    
     [[AuthenticationManager sharedInstance] acquireAuthTokenCompletion:^(ADAuthenticationResult *result) {
         if (result.status == AD_SUCCEEDED) {
             [self setUserConnected:YES];
             
             UIAlertController *alertController = [UIAlertController
                                                   alertControllerWithTitle:@"Save to OneDrive"
-                                                  message:@"Save this image with a file name.\nIt will be stored under /ImageShop/{filename}.png"
+                                                  message:@"Save this image with a file name.\nIt will be stored under /ImageDiscovery/{filename}.png"
                                                   preferredStyle:UIAlertControllerStyleAlert];
             
             [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
@@ -98,7 +98,7 @@
                                                              handler:^(UIAlertAction *action)
                                        {
                                            UITextField *filename = alertController.textFields.firstObject;
-                                           NSData *photoData = UIImagePNGRepresentation(self.image);
+                                           NSData *photoData = UIImageJPEGRepresentation(self.image, 0.5);
                                            
                                            [self uploadToOneDriveRESTWithFilename:filename.text content:photoData];
                                            
@@ -125,7 +125,7 @@
                                  content:(NSData*) data{
     self.storeOneDriveCell.detailTextLabel.text = @"Storing";
     
-    NSMutableString *urlString = [NSMutableString stringWithString:@"https://graph.microsoft.com/v1.0/me/drive/root:/ImageShop/<FILENAME>:/content"];
+    NSMutableString *urlString = [NSMutableString stringWithString:@"https://graph.microsoft.com/v1.0/me/drive/root:/ImageDiscovery/<FILENAME>:/content"];
     
     [urlString replaceOccurrencesOfString:@"<FILENAME>"
                                withString:filename
@@ -140,7 +140,7 @@
     NSString *authorization = [NSString stringWithFormat:@"Bearer %@", [AuthenticationManager sharedInstance].accessToken];
     [request setValue:authorization forHTTPHeaderField:@"Authorization"];
     [request setHTTPBody:data];
-
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [[manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
@@ -178,7 +178,7 @@
                                                              handler:^(UIAlertAction *action)
                                        {
                                            UITextField *emailAddress = alertController.textFields.firstObject;
-                                           NSData *postData = [self mailContent:[UIImagePNGRepresentation(self.image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]
+                                           NSData *postData = [self mailContent:[UIImageJPEGRepresentation(self.image, 0.5) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]
                                                                              to:emailAddress.text];
                                            
                                            [self sendMailREST:postData];
@@ -233,7 +233,7 @@
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-   
+    
     [[manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         NSLog(@"%d", (int)(((NSHTTPURLResponse*)response).statusCode));
         
