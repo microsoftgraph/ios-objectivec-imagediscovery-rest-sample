@@ -1,10 +1,7 @@
-//
-//  main.m
-//  ImageShop
-//
-//  Created by Jason Kim on 12/3/15.
-//  Copyright © 2015 Jason Kim. All rights reserved.
-//
+/*
+ * Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
