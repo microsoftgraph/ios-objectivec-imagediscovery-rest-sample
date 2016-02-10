@@ -2,11 +2,11 @@
 
 Image Discovery is an iOS sample app that allows you either to take a picture or to search the web for one, and process the fetched image. You can then save it in the cloud or mail to a recipient. For example, you can take a picture, convert the image to black and white, and push it to OneDrive for Business to store.
 
-
+![Camera](https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Image-Discovery/blob/master/Images/camera.gif)
 
 Or, you can search for an image via Google Custom Search and mail it to a friend.
 
-
+![Search](https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Image-Discovery/blob/master/Images/search.gif)
 
 This sample illustrates how to use Microsoft Graph, a unified API endpoint, for working with mail and files in Office 365. For more information about Microsoft Graph see the Microsoft Graph overview page.
 
