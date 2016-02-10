@@ -16,7 +16,7 @@
         "Attachments": [
                         {
                         "@odata.type": "#Microsoft.OutlookServices.FileAttachment",
-                        "Name": "image.png",
+                        "Name": "image.jpg",
                         "contentBytes": "<ContentBytes>",
                         }
                         ]

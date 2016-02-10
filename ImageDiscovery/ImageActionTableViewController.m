@@ -85,7 +85,7 @@
             
             UIAlertController *alertController = [UIAlertController
                                                   alertControllerWithTitle:@"Save to OneDrive"
-                                                  message:@"Save this image with a file name.\nIt will be stored under /ImageDiscovery/{filename}.png"
+                                                  message:@"Save this image with a file name.\nIt will be stored under /ImageDiscovery/{filename}.jpg"
                                                   preferredStyle:UIAlertControllerStyleAlert];
             
             [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
@@ -125,7 +125,7 @@
                                  content:(NSData*) data{
     self.storeOneDriveCell.detailTextLabel.text = @"Storing";
     
-    NSMutableString *urlString = [NSMutableString stringWithString:@"https://graph.microsoft.com/v1.0/me/drive/root:/ImageDiscovery/<FILENAME>:/content"];
+    NSMutableString *urlString = [NSMutableString stringWithString:@"https://graph.microsoft.com/v1.0/me/drive/root:/ImageDiscovery/<FILENAME>.jpg:/content"];
     
     [urlString replaceOccurrencesOfString:@"<FILENAME>"
                                withString:filename
@@ -134,7 +134,7 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
     
     [request setHTTPMethod:@"PUT"];
-    [request setValue:@"image/png" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"image/jpeg" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json, text/plain, */*" forHTTPHeaderField:@"Accept"];
     
     NSString *authorization = [NSString stringWithFormat:@"Bearer %@", [AuthenticationManager sharedInstance].accessToken];
