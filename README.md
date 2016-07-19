@@ -59,13 +59,18 @@ This sample illustrates how to use Microsoft Graph, a unified API endpoint, for 
 
 5. Run the sample.
 
+<a name="contributing"></a>
+## Contributing ##
+
+If you'd like to contribute to this sample, see [CONTRIBUTING.MD](/CONTRIBUTING.md).
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Questions and comments
 
 We'd love to get your feedback about the Office 365 iOS Microsoft Graph Image Discovery project. You can send your questions and suggestions to us in the [Issues](https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Image-Discovery/issues) section of this repository.
 
 Questions about Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Make sure that your questions or comments are tagged with [Office365] and [MicrosoftGraph].
-
 
 ## Additional resources
 
@@ -75,4 +80,3 @@ Questions about Office 365 development in general should be posted to [Stack Ove
 
 ## Copyright
 Copyright (c) 2016 Microsoft. All rights reserved.
-
