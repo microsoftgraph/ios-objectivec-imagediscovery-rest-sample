@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		309A5B1A44AAB903AE44ED00 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49044FF3560B0C880A043900 /* libPods.a */; };
 		962550C61C20ED720078C1DB /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962550C51C20ED720078C1DB /* CameraViewController.m */; };
 		962550C91C20EF220078C1DB /* ImageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962550C81C20EF220078C1DB /* ImageSearchViewController.m */; };
 		9634C5C31C5FEC0A0032DE1A /* ImageSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9634C5C21C5FEC0A0032DE1A /* ImageSearchManager.m */; };
@@ -25,10 +24,14 @@
 		96B616B21C23A8F500C19C8E /* ImageActionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B616B11C23A8F500C19C8E /* ImageActionTableViewController.m */; };
 		96B616B61C23AA6900C19C8E /* AuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B616B51C23AA6900C19C8E /* AuthenticationManager.m */; };
 		96FB3B781C16658600C763A9 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB3B771C16658600C763A9 /* InitialViewController.m */; };
+		B28054326136B5913DCF7207 /* libPods-ImageDiscovery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 544916CE1594096153928E57 /* libPods-ImageDiscovery.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23DDAC456D0906A37D933821 /* Pods-ImageDiscovery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageDiscovery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageDiscovery/Pods-ImageDiscovery.debug.xcconfig"; sourceTree = "<group>"; };
 		49044FF3560B0C880A043900 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		544916CE1594096153928E57 /* libPods-ImageDiscovery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageDiscovery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7123B609197F39CC5E39AF23 /* Pods-ImageDiscovery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageDiscovery.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageDiscovery/Pods-ImageDiscovery.release.xcconfig"; sourceTree = "<group>"; };
 		962550C41C20ED720078C1DB /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		962550C51C20ED720078C1DB /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		962550C71C20EF220078C1DB /* ImageSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSearchViewController.h; sourceTree = "<group>"; };
@@ -70,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966D6AB51C226850009D1DE3 /* AVFoundation.framework in Frameworks */,
-				309A5B1A44AAB903AE44ED00 /* libPods.a in Frameworks */,
+				B28054326136B5913DCF7207 /* libPods-ImageDiscovery.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 			children = (
 				966D6AB41C226850009D1DE3 /* AVFoundation.framework */,
 				49044FF3560B0C880A043900 /* libPods.a */,
+				544916CE1594096153928E57 /* libPods-ImageDiscovery.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,6 +95,8 @@
 			children = (
 				CF97EC480B459EAC6DD6019F /* Pods.debug.xcconfig */,
 				9A023D3309D162D047CDA2A5 /* Pods.release.xcconfig */,
+				23DDAC456D0906A37D933821 /* Pods-ImageDiscovery.debug.xcconfig */,
+				7123B609197F39CC5E39AF23 /* Pods-ImageDiscovery.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -220,12 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 963A0A0D1C113048004E2C00 /* Build configuration list for PBXNativeTarget "ImageDiscovery" */;
 			buildPhases = (
-				5F062BE6084AF4575CE6099E /* Check Pods Manifest.lock */,
+				5F062BE6084AF4575CE6099E /* [CP] Check Pods Manifest.lock */,
 				963A09DC1C113048004E2C00 /* Sources */,
 				963A09DD1C113048004E2C00 /* Frameworks */,
 				963A09DE1C113048004E2C00 /* Resources */,
-				FC85B5EB71887B85488DAC4C /* Embed Pods Frameworks */,
-				66F652FBDC9339464F3128F4 /* Copy Pods Resources */,
+				FC85B5EB71887B85488DAC4C /* [CP] Embed Pods Frameworks */,
+				66F652FBDC9339464F3128F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,14 +295,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F062BE6084AF4575CE6099E /* Check Pods Manifest.lock */ = {
+		5F062BE6084AF4575CE6099E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,34 +310,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		66F652FBDC9339464F3128F4 /* Copy Pods Resources */ = {
+		66F652FBDC9339464F3128F4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageDiscovery/Pods-ImageDiscovery-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC85B5EB71887B85488DAC4C /* Embed Pods Frameworks */ = {
+		FC85B5EB71887B85488DAC4C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageDiscovery/Pods-ImageDiscovery-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -460,7 +466,7 @@
 		};
 		963A0A0E1C113048004E2C00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF97EC480B459EAC6DD6019F /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 23DDAC456D0906A37D933821 /* Pods-ImageDiscovery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ImageDiscovery/ImageDiscovery.entitlements;
@@ -477,7 +483,7 @@
 		};
 		963A0A0F1C113048004E2C00 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A023D3309D162D047CDA2A5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7123B609197F39CC5E39AF23 /* Pods-ImageDiscovery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ImageDiscovery/ImageDiscovery.entitlements;
