@@ -1,4 +1,12 @@
-# Office 365 Microsoft Graph Image Discovery for iOS
+# [ARCHIVED] Office 365 Microsoft Graph Image Discovery for iOS
+
+## IMPORTANT
+
+This project is being archived. As part of the archival process, we're closing all open issues and pull requests.
+
+You can continue to use this sample "as-is", but it won't be maintained moving forward. We apologize for any inconvenience.
+
+## Overview
 
 Image Discovery is an iOS sample app that allows you either to take a picture or to search the web for one, and process the fetched image. You can then save it in the cloud or mail to a recipient. For example, you can take a picture, convert the image to black and white, and push it to OneDrive for Business to store.
 
